@@ -1,0 +1,56 @@
+{
+  "name": "vuln-intel-ext",
+  "version": "1.0.0",
+  "description": "Sidecar MCP server extending cve-mcp with diff_since, dependency snapshots, feed status, and WordPress vulnerability lookup",
+  "type": "module",
+  "bin": {
+    "vuln-intel-ext": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vulnerability",
+    "security",
+    "osv",
+    "diff",
+    "wordpress",
+    "wpscan",
+    "cve",
+    "dependency-scanning",
+    "ai-agent"
+  ],
+  "license": "MIT",
+  "author": "Chykalophia",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chykalophia/vuln-intel-ext.git"
+  },
+  "homepage": "https://github.com/Chykalophia/vuln-intel-ext#readme",
+  "bugs": {
+    "url": "https://github.com/Chykalophia/vuln-intel-ext/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "better-sqlite3": "^12.2.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
